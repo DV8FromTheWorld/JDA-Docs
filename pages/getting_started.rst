@@ -43,7 +43,7 @@ Normal Setup
     .. image:: ../images/setup/eclipse/normal_1.png
     
 #. Right click the project, go to **Properties**
-#. Click on **Java Build Path**, then click on **Libraries**, then on **Add External JARs…**
+#. Click on **Java Build Path**, then click on **Libraries**, then on **Add External JARs...**
 
     .. image:: ../images/setup/eclipse/normal_2.png
 
@@ -53,12 +53,12 @@ Normal Setup
    
     .. image:: ../images/setup/eclipse/normal_3.png
 
-#. Click on **Source Attachment**, then on **Edit…**, then mark **External Locations** and click on **External File**
+#. Click on **Source Attachment**, then on **Edit...**, then mark **External Locations** and click on **External File**
 
     .. image:: ../images/setup/eclipse/normal_4.png
 
 #. Here, add your **JDA-x.x.x\_xxx-sources.jar** and click on **OK**
-#. Next, click on **Javadoc Location**, then on **Edit…**, then mark **Javadoc in archive** and click on **Browse**
+#. Next, click on **Javadoc Location**, then on **Edit...**, then mark **Javadoc in archive** and click on **Browse**
 
     .. image:: ../images/setup/eclipse/normal_5.png
 
@@ -74,24 +74,23 @@ Gradle Setup
 #. If you have *Eclipse IDE for Java Developers* installed, skip to **2.**, otherwise you need to install the *Buildship Gradle Integration plugin* first:
     -  Open up Eclipse and go to the Marketplace (located under the *Help* tab)
    
-    -  Search for *\“gradle\”* and install **Buildship Gradle Integration** (`Plugin-Page <http://marketplace.eclipse.org/content/buildship-gradle-integration>`_)
+    -  Search for *'gradle'* and install **Buildship Gradle Integration** (`Plugin-Page <http://marketplace.eclipse.org/content/buildship-gradle-integration>`_)
    
     -  After the plugin is installed, relaunch Eclipse
-   
-    -  Right click within *Package/Project Explorer* and select **New > Other\…**
-   
-    -  In the *Gradle* folder, select **Gradle Project**
-   
-    -  Type a name for your Project and click on *Finish*. Your setup should look like this at this point:
-   
-    -  Delete the classes within ``src/main/java`` and ``src/test/java``
-   
-    -  Open up and edit the file ``build.gradle``
-   
-    -  Replace its content with the following code:
-   
 
-    .. code-block:: java
+#. Right click within *Package/Project Explorer* and select **New > Other...**
+   
+#. In the *Gradle* folder, select **Gradle Project**
+   
+#. Type a name for your Project and click on *Finish*. Your setup should look like this at this point:
+   
+#. Delete the classes within ``src/main/java`` and ``src/test/java``
+   
+#. Open up and edit the file ``build.gradle``
+   
+#. Replace its content with the following code:
+    
+    .. code-block:: groovy
         
         apply plugin: 'java'
         
@@ -122,10 +121,11 @@ Gradle Setup
         }
 
 
-
     - Adjust the version of JDA you want to use (see dependencies-section of file) and fill in your Main-Class as soon as you have one (the one containing your `public static void main(String[] args)` method)
-- Save the file and do the following: *Right click your project > Gradle > Refresh All*
-- Once all of the dependencies have been downloaded, create your desired packages/classes in ``src/main/java`` and start coding!
+
+#. Save the file and do the following: *Right click your project > Gradle > Refresh All*
+
+#. Once all of the dependencies have been downloaded, create your desired packages/classes in ``src/main/java`` and start coding!
 
 ------------------
 
@@ -137,7 +137,7 @@ Maven Setup
 #. Create a new Maven project. (File -> New -> Other -> Maven -> Maven Project)
 #. Now let's start configuring it, first off, open up your pom.xml and add the following lines right after `</description>`
     .. code-block:: xml
-	
+    
         <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <maven.compiler.source>1.8</maven.compiler.source>
@@ -163,7 +163,7 @@ Maven Setup
 
 #. Now, add the dependency, make sure you change `X.X.X_XXX` to the latest version number (Check out at http://ci.dv8tion.net/job/JDA/)
     .. code-block:: xml
-	
+    
         <dependencies>
             <dependency>
                 <groupId>net.dv8tion</groupId>
@@ -176,7 +176,7 @@ Maven Setup
 
 #. Now you need to set up the (build) maven-shade and maven-compile plugins, add the following lines right after `\</dependencies\>`
     .. code-block:: xml
-	
+    
         <build>
             <plugins>
                 <plugin>
@@ -242,6 +242,6 @@ IntelliJ
 #. Apply
 #. You are done!
 
-.. |Project Properties icon| image:: ../images/intellij/5.png
+.. |Project Properties icon| image:: ../images/setup/intellij/5.png
    :align: middle
    :width: 12
