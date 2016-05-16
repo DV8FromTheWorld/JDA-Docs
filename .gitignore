@@ -1,0 +1,5 @@
+# sphinx build folder
+_build
+make clean.bat
+make html.bat
+make pdf.bat
