@@ -54,6 +54,8 @@ When you have your player you need to register it as a guild's sending handler a
     guild.setSendingHandler(getMyURLPlayer(guild.getJDA()));
   }
 
+*(don't forget to connect to a voice channel)*
+
 Receiving Audio
 ===============
 
