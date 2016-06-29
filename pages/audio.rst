@@ -18,7 +18,7 @@ To connect to a channel you want to open an audio connection.
 Sending Audio
 ==============
 
-Sending audio requires an AudioSendingHandler implementation. We provide two implementations in JDA itself.
+Sending audio requires an AudioSendHandler implementation. We provide two implementations in JDA itself.
   
 **FilePlayer**
 
